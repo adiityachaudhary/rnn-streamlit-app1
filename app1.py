@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # --- Load Model and Encoders ---
-model = load_model('rnn_model.keras')
+model = load_model('rnn_model_clean.keras')
 MAX_LEN = 30  # same as training
 
 with open('item_encoder.pkl', 'rb') as f:
