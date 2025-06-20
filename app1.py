@@ -7,7 +7,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 # --- Load Model and Encoders ---
 from keras.models import load_model
 
-model = load_model("rnn_model_clean.keras", compile=False)
+model = load_model("rnn_model_streamlit.keras", compile=False)
+
 
 MAX_LEN = 30  # same as training
 
