@@ -13,8 +13,7 @@ model = load_model("rnn_model_streamlit.keras", compile=False)
 MAX_LEN =MAX_LEN = 672
   # same as training
 
-st.write("Available Items:", list(item_name_to_id.keys()))
-st.write("Available Categories:", list(cat_name_to_id.keys()))
+
 
 with open('item_encoder.pkl', 'rb') as f:
     item_encoder = pickle.load(f)
@@ -28,6 +27,9 @@ cat_map = {i: label for i, label in enumerate(cat_encoder.classes_)}
 
 item_name_to_id = {v: k for k, v in item_map.items()}
 cat_name_to_id = {v: k for k, v in cat_map.items()}
+
+st.write("Available Items:", list(item_name_to_id.keys()))
+st.write("Available Categories:", list(cat_name_to_id.keys()))
 
 # --- Streamlit UI ---
 st.title("🛍️ Predict User's Next Action")
