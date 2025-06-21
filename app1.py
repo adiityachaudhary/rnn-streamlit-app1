@@ -10,7 +10,11 @@ from keras.models import load_model
 model = load_model("rnn_model_streamlit.keras", compile=False)
 
 
-MAX_LEN = 30  # same as training
+MAX_LEN =MAX_LEN = 672
+  # same as training
+
+st.write("Available Items:", list(item_name_to_id.keys()))
+st.write("Available Categories:", list(cat_name_to_id.keys()))
 
 with open('item_encoder.pkl', 'rb') as f:
     item_encoder = pickle.load(f)
